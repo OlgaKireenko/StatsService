@@ -44,7 +44,7 @@ class StatsServiceTest {
         int[] values = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 9;
         // вызываем целевой метод:
-        long actual = service.countMinPurchaisesMonth(values);
+        long actual = service.minPurchaisesMonth(values);
         assertEquals(expected, actual);
     }
     // Количество месяцев с продажами ниже среднего
@@ -55,7 +55,7 @@ class StatsServiceTest {
         int[] values = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 5;
         // вызываем целевой метод:
-        long actual = service.minPurchaisesMonth(values);
+        long actual = service.countMinPurchaisesMonth(values);
         assertEquals(expected, actual);
     }
     // Количество месяцев с продажами выше среднего
@@ -66,7 +66,7 @@ class StatsServiceTest {
         int[] values = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 5;
         // вызываем целевой метод:
-        long actual = service.maxPurchaisesMonth(values);
+        long actual = service.countMaxPurchaisesMonth(values);
         assertEquals(expected, actual);
     }
 }
